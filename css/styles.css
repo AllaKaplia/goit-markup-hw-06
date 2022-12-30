@@ -190,7 +190,8 @@ img {
     color: var(--maine-color-background);
 }
 
-.hero-button {
+.hero-button
+ {
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: transparent;
@@ -417,7 +418,7 @@ img {
     color: var(--border-color);
 }
 
-.social-media {
+.social-media, .subscription-title {
     margin-bottom: 16px;
     color: var(--maine-color-background);
     font-weight: 500;
@@ -448,6 +449,10 @@ img {
 .social-media-list {
     display: flex;
     gap: 16px;
+}
+
+.subscription-btn-send {
+    margin-left: 16px;
 }
 
 /* Portfolio page: Section row */
