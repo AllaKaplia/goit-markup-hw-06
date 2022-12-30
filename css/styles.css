@@ -13,6 +13,7 @@
     --active-color-button: #404BBF;
     --color-thumb:  #F4F4FD;
     --color-hover-social: #31D0AA;
+    --color-accent-form:#8E8F99;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -368,9 +369,9 @@ img {
     align-items: center;
     justify-content: center;
     height: 88px;
-    border: 1px solid #8E8F99;
+    border: 1px solid var(--color-accent-form);
     border-radius: 4px;
-    fill: #8E8F99;
+    fill: var(--color-accent-form);
 
     transition: border-color 250ms var(--timing-function),
     fill 250ms var(--timing-function);
@@ -689,11 +690,8 @@ img {
     
 
     width: 408px;
-    height: 576px;
-    padding-top: 72px;
-    padding-bottom: 24px;
-    padding-left: 24px;
-    padding-right: 24px;
+    height: 584px;
+    padding: 24px;
 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -708,7 +706,6 @@ img {
     top: 24px;
     right: 24px;
 
-
     width: 24px;
     height: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -718,8 +715,162 @@ img {
     background-color: var(--border-color);
 }
 
+.modal-button:active, .modal-button:focus,
+.modal-button:hover {
+    fill: var(--maine-color-background);
+    background-color: var(--active-color-button)
+}
+
 .close-modal {
     width: 100%;
     height: 100%;
+}
+/*#modal-form ---------- Modal-form ----------- */
+
+.registration-form-title {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--base-color-text);
+}
+
+.registration-form-field {
+    position: relative;
+    display: block;
+}
+
+.registration-form-label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--color-accent-form);
+}
+
+.registration-form-input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+    padding: 10px 38px;
+
+    background-color: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+
+    transition: outline 250ms var(--timing-function);
+}
+
+.registration-form-input:focus,
+.registration-form-message:focus {
+    outline: 1px solid var(--color-style-logo);
+    box-shadow: unset;
+}
+
+.registration-form-input::placeholder, 
+.registration-form-message::placeholder {
+    opacity: 0;
+    transition: opacity 250ms var(--timing-function)
+}
+
+.registration-form-input:focus::placeholder, 
+.registration-form-message:focus::placeholder {
+    opacity: 1;
+    transition-delay: 200ms;
+}
+
+.registration-form-icon {
+    position: absolute;
+    bottom: 18px;
+    left: 10px;
+
+    fill: var(--base-color-text);
+    transition: fill 250ms var(--timing-function);
+}
+
+.registration-form-input:focus + .registration-form-icon {
+    fill: var(--color-style-logo);
+}
+
+.registration-form-message {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 16px;
+    padding-top: 8px;
+    padding-left: 16px;
+    resize: none;
+
+    background-color: transparent;
+
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
+    outline: 1px solid transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.registration-form-text {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #757575;
+}
+
+/*#checkbox ---------- Сheckbox ----------- */
+
+.registration-form-agreemend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.registration-form-checkbox {
+    --webkit-appearance: none;
+    appearance: none;
+
+}
+
+.registration-form-text {
+    user-select: none;
+}
+
+.registration-form-link {
+    color: var(--active-color-button);
+}
+
+.registration-form-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.check {
+    opacity: 0;
+    transition: opacity 250ms var(--timing-function);
+}
+
+.uncheck {
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+}
+
+.registration-form-checkbox:checked ~ .registration-form-check > .check {
+    opacity: 1;
+}
+
+.registration-form-checkbox:checked ~ .registration-form-check > .uncheck {
+    opacity: 0;
 }
 /*  */
